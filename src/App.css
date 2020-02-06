@@ -2,20 +2,11 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #d9e1f3;
+  min-height: 3rem;
+  padding-top:1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +15,42 @@
   color: white;
 }
 
+.input-wrap {
+  width:95%;
+  display:flex;
+}
+
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.memes{
+  height:calc(100vh - 3.25rem);
+  overflow:auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
+
+.meme{
+  margin:5px;
+}
+
+.meme-title {
+  display:none;
+  position:absolute;
+  width:calc(100%-5px);
+  bottom:2px;
+  background:rgba(255,255,255,0.35);
+  font-weight:bold;
+  font-size:0.7rem;
+  padding:2px 5px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.meme:hover .meme-title {
+  display:block;
+}
+
